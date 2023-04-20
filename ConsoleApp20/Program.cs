@@ -97,7 +97,14 @@ namespace KeyboardOptimization
             int[] test1 = population[index1];
             int[] test2 = population[index2];
 
-            return fitness[index1] <= fitness[index2] ? test1 : test2;
+            if (fitness[index1] <= fitness[index2])
+            {
+                return test1;
+            }
+            else
+            {
+                return test2;
+            }
         }
 
 
